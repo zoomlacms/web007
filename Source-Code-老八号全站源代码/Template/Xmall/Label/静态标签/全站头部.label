@@ -1,0 +1,60 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>318</LabelID>
+    <LabelName>全站头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;nav class="navbar navbar-expand-lg navbar-light inav"&gt;
+&lt;div class="container"&gt;
+	 &lt;a class="navbar-brand" href="/"&gt;&lt;img src="{$LogoUrl/}" alt="{$SiteName/}"/&gt;&lt;/a&gt;
+&lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation"&gt; &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt; &lt;/button&gt;
+  &lt;div class="collapse navbar-collapse" id="navbarsExample05"&gt; 
+  &lt;ul class="navbar-nav"&gt;
+  &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/"&gt;首页&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item" id="nav8"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(8)/}"&gt;糖巧膨化&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item" id="nav9"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(9)/}"&gt;果冻饮料&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item" id="nav10"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(10)/}"&gt;饼干糕点&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item" id="nav11"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(11)/}"&gt;炒货干货&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item" id="nav12"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(12)/}"&gt;方便速食&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item" id="nav13"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(13)/}"&gt;辣条肉干&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item" id="nav2"&gt;&lt;a class="nav-link" href="{ZL:GetNodeListUrl(2)/}"&gt;1元特价&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="nav mr-auto inav_r"&gt;
+&lt;li&gt;&lt;a href="/user/"&gt;登录&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/User/Register"&gt;注册&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="javascript:;" onClick="isSearch();"&gt;&lt;i class="zi zi_search" zico="搜索"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class="home_search"&gt;
+&lt;form action="/Search/SearchList"&gt;
+&lt;i class="zi zi_searchBlack"&gt;&lt;/i&gt;
+&lt;input type="text" class="form-control" placeholder="输入关键字，回车查询" name="keyword" /&gt;
+&lt;a onClick="isClose();" href="javascript:;"&gt;&lt;i class="zi zi_windowclose"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/form&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/nav&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,262 @@
+﻿{ZL.Source id="常规商品数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="常规商品数据源" FD="Proname" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="常规商品数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="常规商品数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot4()/}
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script type="text/javascript" src="{$CssDir/}js/jquery.imagezoom.min.js"></script>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$CssDir/}js/server.js"></script>
+
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+
+<div class="con_banner">
+<div class="shop_bannerBg"></div>
+<h1><a href="{ZL:GetNodeLinkUrl({SField sid="常规商品数据源" FD="NodeID" page="0"/})/}"><i class="zi zi_replyall"></i> {ZL.Label id="输出指定ID节点名" NodeID="{SField sid="常规商品数据源" FD="NodeID" page="0"/}" /} </a></h1>
+</div>
+<!--shopbanner-->
+
+
+<div class="container con_shop" id="shopCon">
+<div class="row">
+<div class="col-12 col-sm-3 con_shop_l">
+<div class="list-group">
+<div class="list-group-item d-flex justify-content-between align-items-center list-group-item-success">
+{ZL.Label id="根据商品ID获得父节点名及链接_老八专用" NOdeID="{SField sid="常规商品数据源" FD="Nodeid" page="0"/}" /}
+</div>
+{ZL.Label id="根据同ID节点列表" NOdeID="{SField sid="常规商品数据源" FD="Nodeid" page="0"/}" ShowNum="10" order="asc" /}
+</div>
+</div><!--left end-->
+<div class="col-md-9  col-12 con_shop_r">
+<div class="row">
+<div class="col-md-5 col-12">
+<div class="box">
+<div class="tb-booth tb-pic tb-s310">
+<a href='{ZL:GetPicUrl({SField sid="常规商品数据源" FD="Thumbnails" page="0"/})/}'><img src='{ZL:GetPicUrl({SField sid="常规商品数据源" FD="Thumbnails" page="0"/})/}' alt='{SField sid="常规商品数据源" FD="Proname" page="0"/}' rel='{ZL:GetPicUrl({SField sid="常规商品数据源" FD="Thumbnails" page="0"/})/}' class="jqzoom" alt="{SField sid="常规商品数据源" FD="Proname" page="0"/}" /></a>
+</div>
+<div class="row">
+<ul class="tb-thumb list-unstyled" id="thumblist">
+<li class="col-2 tb-selected">
+<div class="tb-pic tb-s40">
+<a href="javascript:;">
+<img src="{ZL:GetPicUrl({SField sid="常规商品数据源" FD="Thumbnails" page="0"/})/}" mid="{ZL:GetPicUrl({SField sid="常规商品数据源" FD="Thumbnails" page="0"/})/}" big="{ZL:GetPicUrl({SField sid="常规商品数据源" FD="Thumbnails" page="0"/})/}" alt="{SField sid="常规商品数据源" FD="Proname" page="0"/}">
+</a>
+</div>
+</li>
+<script type="text/javascript" src="/JS/Modal/APIResult.js"></script>
+<script>
+var pics='{SField sid="常规商品数据源" FD="pics" page="0"/}';
+var jsonstr=JSON.parse(pics);
+if(jsonstr.length>0)
+{
+	for(i=0;i<jsonstr.length;i++)
+	{
+		document.write('<li class="col-2"><div class="tb-pic tb-s40"><a href="javascript:;"><img src="/UploadFiles/'+jsonstr[i].url+'" mid="/UploadFiles/'+jsonstr[i].url+'" big="/UploadFiles/'+jsonstr[i].url+'" alt="'+jsonstr[i].desc+'"></a></div></li>');
+	}
+}
+</script>
+</ul>
+</div>
+</div>
+</div>
+
+<div  class="col-sm-7 col-12">
+<h2>{SField sid="常规商品数据源" FD="Proname" page="0"/}</h2>
+<form id="form" name="form" method="post" action="/Cart/Cart.aspx">
+<input name="id" type="hidden" id="id" value="{SField sid="常规商品数据源" FD="ID" page="0"/}" />
+
+<ul class="list-group con_shop_list">
+  <li class="list-group-item">编号<span>{SField sid="常规商品数据源" FD="ProCode" page="0"/}</span></li>
+  <li class="list-group-item">市场价<span><s>{ZL:GetMoney({SField sid="常规商品数据源" FD="ShiPrice" page="0"/},2,1)/} 元</s></span></li>
+  <li class="list-group-item">零售价<span style="font-size:1.46rem; font-weight:bold; color:#f40;"><i class="zi zi_yensign"></i> {ZL:GetMoney({SField sid="常规商品数据源" FD="LinPrice" page="0"/},2,1)/}元</span></li> 
+  <li class="list-group-item">VIP批发价<span style="font-weight:bold; color:#f40;" id="pfprice"></span></li>
+<script>
+    $(function () {
+        var getPriceFromArr = function () {
+            var gid = 2;
+            var priceArr = {SField sid="常规商品数据源" FD="UserPrice" page="0"/};
+            if (!priceArr || priceArr.length < 1) { return; }
+            for (i = 0; i < priceArr.length; i++) {
+                if (priceArr[i].gid == gid) { $("#pfprice").text(priceArr[i].value + "元"); break; }
+            }
+        }();
+    })
+</script>
+
+<li class="list-group-item">购买数量
+<div class="input-group con_shop_nums">
+<div class="input-group-prepend">
+<span class="input-group-text bg-info "><i class="zi zi_minus"  onClick="Product.minus();"></i></span>
+</div>
+<input type="text" class="form-control text-center" name="Pronum" id="Pronum" value="1"  maxlength="8"/>
+<div class="input-group-append">
+<span class="input-group-text bg-info"><i class="zi zi_plus"  onClick="Product.plus();"></i></span>
+</div>
+</div>
+</li>
+</ul>
+<input name="Attribute" id="Attribute"  type="hidden" value="">
+<input name="color" value="" id="color" type="hidden" />
+<input name="size" value="" id="size" type="hidden" />
+</form>
+
+<div class="con_shop_guige">
+<ul class="con_shop_guige_{ZL.Label id="内容页相关商品_组合抽取" ProID="{SField sid="常规商品数据源" FD="ID" page="0"/}" /}">
+{ZL.Label id="内容页相关商品" ProIDS="{ZL.Label id="内容页相关商品_组合抽取" ProID="{SField sid="常规商品数据源" FD="ID" page="0"/}" /}" order="asc" ShowNum="10" /}
+</ul><div class="clearfix"></div>
+</div>
+
+<div class="con_shop_buy">
+<a onclick="Product.addFav()" href="javascript:;" class="btn btn-link"><i class="zi zi_starLine"></i></a>
+<button type="button" onClick="Product.submitToCart();" class="btn btn-danger"><i class="zi zi_shoppingcart"></i> 立即购买</button>
+<button type="button" onClick="Product.addToCart();" class="btn btn-danger"><i class="zi zi_plussquare"></i> 加入购物车</button>
+</div>
+</div>
+</div>
+<!--内容主体开始 -->
+<ul class="nav nav-tabs" style="margin-top:1em;">
+<li class="active"><a href="#home" data-toggle="tab">商品详细：</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content shop_content">
+<div class="tab-pane active" id="home">{SField sid="常规商品数据源" FD="Procontent" page="0"/} </div>
+</div>
+<!--右 --> 
+
+
+
+</div>
+</div>
+</div>
+<!--套餐-->
+<div class="container">
+<div role="tabpanel" class="pro_group">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"><a href="#t1" aria-controls="t1" role="tab" data-toggle="tab"></a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="t1">
+<div class="pro_tui_ms"></div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+<!--内容主体结束 -->
+
+{ZL.Label id="全站底部"/}
+
+
+<script src="{$CssDir/}js/Product.js"></script>
+<script>
+
+//===========================================================
+/*动态输出商品组合详细信息*/
+var para = {
+key:'',
+alias:'product',
+psize:'1000',
+cpage:1,
+cate:1,
+proid:'"id":"{SField sid="常规商品数据源" FD="ID" page="0"/}"'
+}
+$.post("/API/Center.ashx?action=GetCustom",para,function(data){
+	data=JSON.parse(data);
+	if(data.result!="[]"){
+		data=JSON.parse(data.result);
+		for(var i=0;i<data.length;i++){
+			var prohtml='';
+			proStr=data[i].procontent;
+			proID=data[i].id;
+			proPrice=data[i].shiprice;
+			proName=data[i].proname;
+			proStr=JSON.parse(proStr);
+			$.each(proStr,function(i,proStr){
+				prohtml+='<div class="pro_tui_m" data-id='+proStr.id+'><a href="/Shop/'+proStr.id+'.aspx"><img src="/UploadFiles/nopic.gif" alt="'+proStr.name+'" value="'+proStr.name+'" /></a><h4><a href="/Shop/'+proStr.id+'.aspx">'+proStr.name+'</a></h4><p>单价：<span>'+proPrice.toFixed(2)+'</span></p><i class="zi zi_plus"></i></div>';
+			});
+			$(".pro_group .nav-tabs li:nth-child("+(i+1)+") a").html(proName);
+			if(i>=1){
+				var str='<li role="presentation"><a href="#t'+(i+1)+'" aria-controls="t'+(i+1)+'" role="tab" data-toggle="tab">'+proName+'</a></li>';
+				var str1='<div role="tabpanel" class="tab-pane" id="t'+(i+1)+'"><div class="pro_tui_ms"></div></div>'
+				$(".pro_group ul").append(str);
+				$(".pro_group .tab-content").append(str1);
+			}
+			var a1='<div class="pro_tui_je"><i>=</i><p>组合价:<span>'+proPrice.toFixed(2)+'</span><a href="/Cart/Cart.aspx?ID='+proID+'&Pronum=1">立即购买</a></p></div>';
+			$(".pro_group .tab-content .tab-pane:nth-child("+(i+1)+") .pro_tui_ms").append('<div class="pro_tui_k">'+prohtml+'<div class="clearfix"></div></div>');
+			$(".pro_group .tab-content .tab-pane:nth-child("+(i+1)+")").append(a1+'<div class="clearfix"></div>');
+		}
+        /*设置每个商品的缩略图*/
+		$(".pro_tui_m").each(function(index, element) {
+			var id=$(this).data(id);
+			var para = {
+			key:'',
+			alias:'propic',
+			psize:'1000',
+			cpage:1,
+			cate:1,
+			proid:id.id
+			}
+			$.post("/API/Center.ashx?action=GetCustom",para,function(data){
+				proPic='';
+				data=JSON.parse(data);
+				if(data.result!=""){
+					data=JSON.parse(data.result);
+                    if(data[0].thumbnails!=null){
+                        if(data[0].thumbnails.indexOf("UploadFile")) proPic="/UploadFile/"+data[0].thumbnails;
+					    else proPic="/"+data[0].thumbnails;
+                    }else{
+                        proPic="/UploadFiles/nopic.gif";
+                    }
+					$(".pro_tui_m[data-id='"+id.id+"']").find("img").attr("src",proPic);
+					$(".pro_group .pro_tui_m[data-id='"+id.id+"'] p span").html(data[0].shiprice.toFixed(2));
+				}
+			});
+		});
+	}else if(data.result=="[]"){
+        $(".pro_group").hide();   
+    }
+    //读取商品个数及设置外层div长度，用于overflow
+    $(".pro_group .tab-content .tab-pane .pro_tui_ms .pro_tui_k").each(function(index, element) {
+        var h = ($(this).children(".pro_tui_m").length)*13+"em";
+        $(this).css("width",h);
+    });
+});
+
+
+//商品图片切换 
+$(document).ready(function(){
+	$(".jqzoom").imagezoom();
+	$("#thumblist li a").click(function(){
+		$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+		$(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+		$(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+	});
+});
+
+//商品规格状态指示器
+$().ready(function(e) {
+    $("#guige{SField sid="常规商品数据源" FD="ID" page="0"/}").addClass("active");
+	$("#nav{ZL.Label id="根据商品ID获得父节点ID" NOdeID="{SField sid="常规商品数据源" FD="Nodeid" page="0"/}" /}").addClass("active");
+});
+
+</script>
+<script>
+    Product.proid={SField sid="常规商品数据源" FD="ID" page="0"/};
+    Product.init();
+</script>
+
+
+</body>
+</html>
+

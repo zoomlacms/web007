@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{$SiteName/}_首页</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot4()/}
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+{ZL:GetCSS(1,0)/}
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light  inav">
+<div class="container">
+	 <a class="navbar-brand" href="/"><img src="{$LogoUrl/}" alt="{$SiteName/}"/></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarsExample05"> 
+  <ul class="navbar-nav">
+  <li class="nav-item"><a class="nav-link active" href="/">首页</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(8)/}">糖巧膨化</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(9)/}">果冻饮料</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(10)/}">饼干糕点</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(11)/}">炒货干货</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(12)/}">方便速食</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(13)/}">辣条肉干</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeListUrl(2)/}">1元特价</a></li>
+</ul>
+<ul class="nav mr-auto inav_r">
+<li><a href="/user/">登录</a></li>
+<li><a href="/User/Register">注册</a></li>
+<li><a href="javascript:;" onClick="isSearch();"><i class="zi zi_search" zico="搜索"></i></a></li>
+</ul>
+<ul class="home_search">
+<form action="/Search/SearchList">
+<i class="zi zi_searchBlack"></i>
+<input type="text" class="form-control" placeholder="输入关键字，回车查询" name="keyword" />
+<a onClick="isClose();" href="javascript:;"><i class="zi zi_windowclose"></i></a>
+</form>
+</ul>
+</div>
+</div>
+</nav>
+<!--inav end-->
+
+<section id="carouselExampleCaptions" class="carousel slide ibanner" data-ride="carousel">
+  <ol class="carousel-indicators">
+	<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+	<li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
+	<li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
+	<li data-target="#carouselExampleCaptions" data-slide-to="3" class=""></li>
+  </ol>
+  <div class="carousel-inner">
+ 	<div class="carousel-item ibanner1 active">
+	  <a href=""><div class="carousel-caption d-none d-md-block">
+<!--		<h3>最全网线食品让你hight不够~</h3>-->
+<!--		<p>新会员注册就拿100元优惠券大礼包，不家818神券来袭</p>-->
+		</div></a>
+	</div>
+	<div class="carousel-item ibanner2">
+	  <a href=""><div class="carousel-caption d-none d-md-block">
+		<h3>最全网线食品让你hight不够~</h3>
+		<p>新会员注册就拿100元优惠券大礼包，不家818神券来袭</p>
+		</div></a>
+	</div>
+	<div class="carousel-item ibanner3">
+	  <a href=""><div class="carousel-caption d-none d-md-block">
+		<h3>咖啡小吃全场特价</h3>
+		<p>正宗的货源，汇聚全球好货让你抢购不尽:)</p>
+		</div></a>
+	</div>
+	<div class="carousel-item ibanner4">
+	  <a href=""><div class="carousel-caption d-none d-md-block">
+		<h3>加盟我们共铸辉煌</h3>
+		<p>优秀的营商体系确保每一个企业客户的创收.</p>
+		</div></a>
+	</div>	
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </section>
+<!-- ibanner end -->
+
+
+<section class="container sec1">
+<div class="sec_title"><strong><em>1F</em>糖巧膨化</strong>
+<span>
+<a href="{ZL:GetNodeLinkUrl(14)/}">薯片膨化</a>
+<a href="{ZL:GetNodeLinkUrl(15)/}">糖果</a>
+<a href="{ZL:GetNodeLinkUrl(16)/}">口香糖</a>
+<a href="{ZL:GetNodeLinkUrl(17)/}">巧克力</a>
+<a href="{ZL:GetNodeLinkUrl(8)/}">更多>></a>
+</span>
+</div>
+<div class="row">
+<div class="col-12 col-sm-9 secList">
+<ul>
+{ZL.Label id="首页商品列表_按大类" NodeID="8" TitleNum="28" ShowNum="6" /}
+</ul>
+</div>
+<div class="col-12 col-sm-3 sec1_r">
+<div class="greenTil">商城资讯</div>
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="1" TitleNum="40" ShowNum="12" /}
+</ul>
+<span><a href="{ZL:GetNodeLinkUrl(1)/}">More+</a></span>
+<a href=""><img src="{$CssDir/}images/sugar3.png" alt=""></a>
+</div> 
+</div>
+</section>
+<!--sec1 end-->
+
+
+
+<section class="container sec2">
+<div class="sec_title"><strong><em>2F</em>果冻饮料</strong>
+<span>
+<a href="{ZL:GetNodeLinkUrl(18)/}">果冻</a>
+<a href="{ZL:GetNodeLinkUrl(19)/}">碳酸饮料</a>
+<a href="{ZL:GetNodeLinkUrl(20)/}">果汁饮料</a>
+<a href="{ZL:GetNodeLinkUrl(21)/}">豆奶</a>
+<a href="{ZL:GetNodeLinkUrl(9)/}">更多>></a>
+</span>
+</div>
+<div class="row">
+<div class="col-12 col-sm-9 secList">
+<ul>
+{ZL.Label id="首页商品列表_按大类" NodeID="9" TitleNum="28" ShowNum="6" /}
+</ul>
+</div>
+<div class="col-12 col-sm-3 sec_rPhoto">
+<a href="{ZL:GetNodeLinkUrl(9)/}"><img src="{$CssDir/}images/drink4.jpg" alt=""></a>
+</div> 
+</div>
+</section>
+<!--sec2 end-->
+
+
+<section class="container sec3">
+<div class="sec_title"><strong><em>3F</em>饼干糕点</strong>
+<span>
+<a href="{ZL:GetNodeLinkUrl(22)/}">曲奇</a>
+<a href="{ZL:GetNodeLinkUrl(23)/}">饼干</a>
+<a href="{ZL:GetNodeLinkUrl(24)/}">传统糕点</a>
+<a href="{ZL:GetNodeLinkUrl(25)/}">西式糕点</a>
+<a href="{ZL:GetNodeLinkUrl(10)/}">更多>></a>
+</span>
+</div>
+<div class="row">
+<div class="col-12 col-sm-9 secList">
+<ul>
+{ZL.Label id="首页商品列表_按大类" NodeID="10" TitleNum="28" ShowNum="6" /}
+</ul>
+</div>
+<div class="col-12 col-sm-3 sec_rPhoto">
+<a href="{ZL:GetNodeLinkUrl(10)/}"><img src="{$CssDir/}images/bingg2.jpg" alt=""></a>
+</div> 
+</div>
+</section>
+
+
+<!--sec3 end-->
+<section class="container sec4">
+<div class="sec_title"><strong><em>4F</em>炒货干货</strong>
+<span>
+<a href="{ZL:GetNodeLinkUrl(26)/}">瓜子</a>
+<a href="{ZL:GetNodeLinkUrl(27)/}">花生</a>
+<a href="{ZL:GetNodeLinkUrl(28)/}">豆类制品</a>
+<a href="{ZL:GetNodeLinkUrl(11)/}">更多>></a>
+</span>
+</div>
+<div class="row">
+<div class="col-12 col-sm-9 secList">
+<ul>
+{ZL.Label id="首页商品列表_按大类" NodeID="11" TitleNum="28" ShowNum="6" /}
+</ul>
+</div>
+<div class="col-12 col-sm-3 sec_rPhoto">
+<a href="{ZL:GetNodeLinkUrl(11)/}"><img src="{$CssDir/}images/chaoh2.jpg" alt=""></a>
+</div> 
+</div>
+</section>
+<!--sec4 end-->
+
+<section class="container sec5">
+<div class="sec_title"><strong><em>5F</em>饼干糕点</strong>
+<span>
+<a href="{ZL:GetNodeLinkUrl(29)/}">方便面</a>
+<a href="{ZL:GetNodeLinkUrl(30)/}">火腿肠</a>
+<a href="{ZL:GetNodeLinkUrl(31)/}">蛋制品</a>
+<a href="{ZL:GetNodeLinkUrl(32)/}">罐头</a>
+<a href="{ZL:GetNodeLinkUrl(12)/}">更多>></a>
+</span>
+</div>
+<div class="row">
+<div class="col-12 col-sm-9 secList">
+<ul>
+{ZL.Label id="首页商品列表_按大类" NodeID="12" TitleNum="28" ShowNum="6" /}
+</ul>
+</div>
+<div class="col-12 col-sm-3 sec_rPhoto">
+<a href="{ZL:GetNodeLinkUrl(12)/}"><img src="{$CssDir/}images/conpin2.jpg" alt=""></a>
+</div> 
+</div>
+</section>
+<!--sec5 end-->
+
+<section class="container sec6">
+<div class="sec_title"><strong><em>6F</em>辣条肉干</strong>
+<span>
+<a href="{ZL:GetNodeLinkUrl(33)/}">辣条</a>
+<a href="{ZL:GetNodeLinkUrl(34)/}">肉干</a>
+<a href="{ZL:GetNodeLinkUrl(13)/}">更多>></a>
+</span>
+</div>
+<div class="row">
+<div class="col-12 col-sm-9 secList">
+<ul>
+{ZL.Label id="首页商品列表_按大类" NodeID="13" TitleNum="28" ShowNum="6" /}
+</ul>
+</div>
+<div class="col-12 col-sm-3 sec_rPhoto">
+<a href="{ZL:GetNodeLinkUrl(13)/}"><img src="{$CssDir/}images/lat2.jpg" alt=""></a>
+</div> 
+</div>
+</section>
+<!--sec6 end-->
+
+<footer>
+<div class="container foot_t">
+<div class="row">
+<div class="about-us">
+      <ul>
+        <li>
+          <strong>关于我们</strong>
+        </li>
+        <li><a href="{ZL:GetNodeLinkUrl(4)/}">关于我们</a></li>
+        <li><a href="{ZL:GetInfoUrl(16)/}">平台介绍</a></li>
+        <li><a href="{ZL:GetInfoUrl(18)/}">商务合作</a></li>
+      </ul>
+</div>
+    <div class="about-us">
+      <ul>
+        <li>
+          <strong>新手指南</strong>
+        </li>
+      
+        <li><a href="{ZL:GetInfoUrl(19)/}">会员介绍</a></li>
+        <li><a href="{ZL:GetInfoUrl(20)/}">优惠劵使用</a></li>
+        <li><a href="{ZL:GetInfoUrl(21)/}">评价商品</a></li>
+      </ul>
+    </div>
+    <div class="about-us">
+      <ul>
+        <li>
+          <strong>支付方式</strong>
+        </li>
+        <li><a href="{ZL:GetInfoUrl(28)/}">余额支付</a></li>
+        <li><a href="{ZL:GetInfoUrl(29)/}">微信支付</a></li>
+        <li><a href="{ZL:GetInfoUrl(30)/}">线下支付</a></li>
+      </ul>
+    </div>
+    <div class="about-us">
+      <ul>
+        <li>
+          <strong>配送方式</strong>
+        </li>
+        <li><a href="{ZL:GetInfoUrl(26)/}">安全配送</a></li>
+        <li><a href="{ZL:GetInfoUrl(27)/}">配送时间及费用</a></li>
+      </ul>
+    </div>
+    <div class="about-us">
+      <ul>
+        <li>
+          <strong>售后服务</strong>
+        </li>
+        <li><a href="{ZL:GetInfoUrl(22)/}">退换货流程</a></li>
+        <li><a href="{ZL:GetInfoUrl(23)/}">退换货注意事项</a></li>
+      </ul>
+    </div>
+    <div class="about-us">
+      <ul>
+        <li>
+          <strong>帮助中心</strong>
+        </li>
+        <li><a href="{ZL:GetInfoUrl(24)/}">常见问题</a></li>
+        <li><a href="{ZL:GetInfoUrl(25)/}">联系我们</a></li>
+        <li><a href="{ZL:GetInfoUrl(17)/}">版权申明</a></li>
+		<li><a href="http://www.kuaidi100.com/" target="_blank">物流查询</a></li>
+      </ul>
+    </div>
+</div>
+</div>
+
+<div class="container copyright">
+{$Copyright/}
+</div>
+</footer>
+
+
+<nav class="fixed-bottom mfoot">
+<div class="row">
+<div class="col"><a href="/" class="active"><i class="zi zi_home" zico="家"></i>首页</a></div>
+<div class="col"><a href="{ZL:GetNodeLinkUrl(2)/}"><i class="zi zi_gem"></i>商品</a></div>
+<div class="col"><a href="{ZL:GetNodeListUrl(2)/}"><i class="zi zi_shieldalt"></i>1元购</a></div>
+<div class="col"><a href="{ZL:GetNodeLinkUrl(1)/}"><i class="zi zi_paperplane"></i>资讯</a></div>
+<div class="col"><a href="/user/"><i class="zi zi_user"></i>我</a></div>
+</div>
+</nav>
+
+<div class="kefu">
+<ul>
+<li><a href="tel:021-50391046"><span>联系我们</span><i class="zi zi_phone zi_rotate90"></i></a></li>
+<li><a href="http://wpa.qq.com/msgrd?v=3&uin=184886758&site=qq&menu=yes" target="_blank"><span>QQ在线客服</span><i class="zi zi_tmQq" zico="qq"></i></a></li>
+<li class="kefu_wechat"><a href="javascript:;"><span><img src="{$CssDir/}images/Big_Micro.jpg" alt="微信二维码" /></span><i class="zi zi_tmWeixin" zico="微信"></i></a></li>
+<li><a href="/Guest" target="_blank"><span>留言咨询</span><i class="zi zi_msgchat"></i></a></li>
+</ul>
+</div>
+
+
+<script>
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","20%").css("top","0.5rem");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","-1em");
+    $(".home_top_nav").fadeIn(1000);
+}
+</script>
+</body>
+</html>

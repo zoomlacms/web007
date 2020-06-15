@@ -1,0 +1,138 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot4()/}
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+</head> 
+<body>
+<nav class="navbar navbar-expand-lg navbar-light  inav">
+<div class="container">
+	 <a class="navbar-brand" href="/"><img src="{$LogoUrl/}" alt="{$SiteName/}"/></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarsExample05"> 
+  <ul class="navbar-nav">
+  <li class="nav-item"><a class="nav-link" href="/">首页</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(8)/}">糖巧膨化</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(9)/}">果冻饮料</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(10)/}">饼干糕点</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(11)/}">炒货干货</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(12)/}">方便速食</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(13)/}">辣条肉干</a></li>
+  <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeListUrl(2)/}">1元特价</a></li>
+</ul>
+<ul class="nav mr-auto inav_r">
+<li><a href="/user/">登录</a></li>
+<li><a href="/User/Register">注册</a></li>
+<li><a href="javascript:;" onClick="isSearch();"><i class="zi zi_search" zico="搜索"></i></a></li>
+</ul>
+<ul class="home_search">
+<form action="/Search/SearchList">
+<i class="zi zi_searchBlack"></i>
+<input type="text" class="form-control" placeholder="输入关键字，回车查询" name="keyword" />
+<a onClick="isClose();" href="javascript:;"><i class="zi zi_windowclose"></i></a>
+</form>
+</ul>
+</div>
+</div>
+</nav>
+<!--inav end-->
+
+<main class="about_hero">
+<div class="container">
+<h1>传承经典还是老八号</h1>
+    <p class="col-md-8 offset-md-2">还是身边的小店，还是有必必应的服务，还是送货上门，洣江畔的大哥大姐老伯阿姨，都夸赞顶呱呱的商业供应服务，在新电子商务时代，提供更加优质的服务与保障，造福于民,渠道互利...<a href="">查看详情</a></p>
+</div>
+</main>
+<!--about_hero end-->
+
+<section class="about_news">
+<div class="container">
+<div class="row">
+<div class="col-12 col-md-8">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">最新资讯</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">了解老八号</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">媒体报道</a>
+  </li>
+</ul>
+<div class="about_learn">
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="1" TitleNum="40" ShowNum="12" /}
+</ul>
+<span><a href="{ZL:GetNodeLinkUrl(1)/}">More+</a></span>
+</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+ <p>
+ 老八号商城，是由株洲市茶陵老八号食品批发部运营的线上平台，实体运营位于[湖南省株洲市茶陵县城区工业品市场]，多年的糖果、快消品运营资质，保证为用户提供最优秀的产品和服务，加入VIP享受批销特价，茶陵县城还享送货上门服务。<br/>
+ 我们的服务宗旨是：尽一切努力，解决客户后顾之忧；倾全体员工之力，做茶陵快消卓越品牌！
+ <a href="{ZL:GetInfoUrl(16)/}">[More]</a>
+ 
+ </p>
+ 
+ 
+ </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+  <ul>
+	<li><a href="">老八号创新电子商务模式驱动县域经济</a><span>2018.08.06</span></li>
+	<li><a href="">中青网：一个公众号如何改变县城商品销售模式</a><span>2018.08.06</span></li>
+	<li><a href="">2019年，中国消费升级产业展望</a><span>2018.08.06</span></li>
+	<li><a href="">茶陵2018年度运营平稳</a><span>2018.08.06</span></li>
+	</ul></div>
+	</div>
+</div>
+</div>
+
+<div class="col-12 col-md-4 about_news_r">
+         <p class="dy_p1">老八号商城</p>
+         <p href="" >正规进货渠道</p>
+         <p class="dy_p1">专业服务团队</p>
+         <p class="dy_p2">为您贴心服务</p>
+         <p href="" class="btn2" >二十年老品牌</p>
+       </div>
+
+</div>
+
+</section>
+
+
+<section class="about_abc">
+<div class="container">
+  <h2><span>老八号商城</span></h2>
+  <ul>
+    <li class="col-12 col-md-4"><i class="zi zi_check"></i> 互联网创新</li>
+    <li class="col-12 col-md-4"><i class="zi zi_check"></i> 渠道分润</li>
+    <li class="col-12 col-md-4"><i class="zi zi_check"></i> 正品保障</li>
+  </ul>
+</div><div class="clearfix"></div>
+</section>
+<!--about_abc end-->
+
+{ZL.Label id="全站底部"/}
+
+<script>
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","20%").css("top","0.5rem");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","-1em");
+    $(".home_top_nav").fadeIn(1000);
+}
+</script>
+</body>
+</html>

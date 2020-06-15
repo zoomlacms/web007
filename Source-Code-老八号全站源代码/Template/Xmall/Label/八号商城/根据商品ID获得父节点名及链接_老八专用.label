@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>329</LabelID>
+    <LabelName>根据商品ID获得父节点名及链接_老八专用</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>八号商城</LabelCate>
+    <LabelDesc />
+    <LabelParam>NOdeID,0,1,当前节点ID</LabelParam>
+    <LabelTable>ZL_Node</LabelTable>
+    <LabelField>NodeID,NodeName</LabelField>
+    <LabelWhere>NodeID=(select ParentID from zl_node where nodeid=@NOdeID)</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="NodeName"/}&lt;span class="badge badge badge-light badge-pill"&gt;&lt;a href="{ZL:GetNodeLinkUrl({Field="NodeID"/})/}"&gt;更多&lt;/a&gt;&lt;/span&gt;</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Node","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

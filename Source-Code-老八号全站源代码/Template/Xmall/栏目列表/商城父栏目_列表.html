@@ -1,0 +1,44 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot4()/}
+<link href="/dist/css/animate.min.css" rel="stylesheet"/>
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+
+<div class="shop_banner">
+<div class="shop_bannerBg"></div>
+<h1>专业快电商就是老八号</h1>
+</div>
+<!--shopbanner-->
+
+{ZL.Label id="商城父节点循环" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" TitleNum="30" ShowNum="8" ClassName="col-12 col-sm-3" order="asc" Nums="30" /}
+
+{ZL.Label id="全站底部"/}
+<script>
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","20%").css("top","0.5rem");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","-1em");
+    $(".home_top_nav").fadeIn(1000);
+}
+
+//顶部菜单状态绑定
+$().ready(function(e) {
+    $("#nav{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}").addClass("active");
+});	
+</script>
+</body>
+</html>

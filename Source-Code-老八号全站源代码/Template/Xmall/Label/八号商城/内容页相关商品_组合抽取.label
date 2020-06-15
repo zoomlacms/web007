@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>334</LabelID>
+    <LabelName>内容页相关商品_组合抽取</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>八号商城</LabelCate>
+    <LabelDesc />
+    <LabelParam>ProID,,1,商品ID</LabelParam>
+    <LabelTable>ZL_Shop_GroupPro</LabelTable>
+    <LabelField>ProIDS</LabelField>
+    <LabelWhere>ProIDS like '%@ProID%'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="ProIDS"/}</LabelContent>
+    <LabelCount>100</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>大于</setroot>
+    <Modelvalue>01</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent xml:space="preserve">    </FalseContent>
+    <EmptyContent xml:space="preserve">     </EmptyContent>
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Shop_GroupPro","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

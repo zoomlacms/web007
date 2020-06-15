@@ -1,0 +1,111 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>319</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;footer&gt;
+&lt;div class="container foot_t"&gt;
+&lt;div class="row"&gt;
+&lt;div class="about-us"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;strong&gt;关于我们&lt;/strong&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(4)/}"&gt;关于我们&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(16)/}"&gt;平台介绍&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(18)/}"&gt;商务合作&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+&lt;/div&gt;
+    &lt;div class="about-us"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;strong&gt;新手指南&lt;/strong&gt;
+        &lt;/li&gt;
+      
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(19)/}"&gt;会员介绍&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(20)/}"&gt;优惠劵使用&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(21)/}"&gt;评价商品&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="about-us"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;strong&gt;支付方式&lt;/strong&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(28)/}"&gt;余额支付&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(29)/}"&gt;微信支付&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(30)/}"&gt;线下支付&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="about-us"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;strong&gt;配送方式&lt;/strong&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(26)/}"&gt;安全配送&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(27)/}"&gt;配送时间及费用&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="about-us"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;strong&gt;售后服务&lt;/strong&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(22)/}"&gt;退换货流程&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(23)/}"&gt;退换货注意事项&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="about-us"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;strong&gt;帮助中心&lt;/strong&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(24)/}"&gt;常见问题&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(25)/}"&gt;联系我们&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="{ZL:GetInfoUrl(17)/}"&gt;版权申明&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="http://www.kuaidi100.com/" target="_blank"&gt;物流查询&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="container copyright"&gt;
+{$Copyright/}
+&lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;div class="kefu"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="tel:021-50391046"&gt;&lt;span&gt;联系我们&lt;/span&gt;&lt;i class="zi zi_phone zi_rotate90"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wpa.qq.com/msgrd?v=3&amp;uin=184886758&amp;site=qq&amp;menu=yes" target="_blank"&gt;&lt;span&gt;QQ在线客服&lt;/span&gt;&lt;i class="zi zi_tmQq" zico="qq"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class="kefu_wechat"&gt;&lt;a href="javascript:;"&gt;&lt;span&gt;&lt;img src="{$CssDir/}images/Big_Micro.jpg" alt="微信二维码" /&gt;&lt;/span&gt;&lt;i class="zi zi_tmWeixin" zico="微信"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Guest" target="_blank"&gt;&lt;span&gt;留言咨询&lt;/span&gt;&lt;i class="zi zi_msgchat"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

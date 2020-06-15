@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>331</LabelID>
+    <LabelName>商城父节点循环</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>八号商城</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|TitleNum,30,1,标题长度|ShowNum,10,1,调用信息数|ClassName,col-12 col-sm-3,1,CSS类名|order,asc$desc,3,Order排序|Nums,30,1,轮循数量</LabelParam>
+    <LabelTable>ZL_Node</LabelTable>
+    <LabelField>NodeID,NodeName</LabelField>
+    <LabelWhere>ParentID=@NodeID</LabelWhere>
+    <LabelOrder>OrderID @order</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="container shop_list"&gt;
+&lt;div class="shop_listTitle" id="NodeID{Field="NodeID"/}"&gt;{Field="NodeName"/}&lt;span&gt;&lt;a href="{ZL:GetNodeLinkUrl({Field="NodeID"/})/}"&gt;More +&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;ul class="row"&gt;
+{ZL.Label id="商城普通商品标签_不分页列表V4" NodeID="{Field="NodeID"/}" TitleNum="@TitleNum" ShowNum="@ShowNum" ClassName="@ClassName" /}
+&lt;/ul&gt;
+&lt;/div&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@Nums</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Node","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

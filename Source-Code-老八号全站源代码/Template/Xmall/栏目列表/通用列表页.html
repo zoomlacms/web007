@@ -1,0 +1,110 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot4()/}
+<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/dist/js/trianglify.min.js"></script>
+</head> 
+<body>
+{ZL.Label id="全站头部"/}
+
+<div class="info_banner" id="svgbg">
+<h1 class="position-absolute">{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</h1>
+</div>
+
+<main role="main" class="container">
+<div class="row">
+<div class="col-12 col-sm-9">
+<div class="mySites">
+<nav aria-label="breadcrumb" role="navigation">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="">首页</a></li>
+<li class="breadcrumb-item active">{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</li>
+</ol>
+</nav>
+</div>
+<div class="list-group">
+<div class="n_lis">
+{ZL.Label id="输出指定节点标题列表_带时间属性_响应式分页v4" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" TitleNum="120" ShowNum="20" /}
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-3 class_rList">
+<div class="class_rList_t">商城导航</div>
+<ul class="row">
+<li class="col-12 col-sm-6"><a href="{ZL:GetNodeLinkUrl(8)/}" target="_blank">糖巧膨化</a></li>
+<li class="col-12 col-sm-6"><a href="{ZL:GetNodeLinkUrl(9)/}" target="_blank">果冻饮料</a></li>
+<li class="col-12 col-sm-6"><a href="{ZL:GetNodeLinkUrl(10)/}" target="_blank">饼干糕点</a></li>
+<li class="col-12 col-sm-6"><a href="{ZL:GetNodeLinkUrl(11)/}" target="_blank">炒货干货</a></li>
+<li class="col-12 col-sm-6"><a href="{ZL:GetNodeLinkUrl(12)/}" target="_blank">方便速食</a></li>
+<li class="col-12 col-sm-6"><a href="{ZL:GetNodeLinkUrl(13)/}" target="_blank">辣条肉干</a></li>
+</ul>
+<div class="class_rList_t">资讯导航</div>
+<ul class="row">
+<li class="col-lg-6 col-md6"><a href="{ZL:GetNodeLinkUrl(6)/}" target="_blank">业界动态</a></li>
+<li class="col-lg-6 col-md6"><a href="{ZL:GetNodeLinkUrl(7)/}" target="_blank">促销信息</a></li>
+<li class="col-lg-6 col-md6"><a href="{ZL:GetNodeLinkUrl(3)/}" target="_blank">使用帮助</a></li>
+<li class="col-lg-6 col-md6"><a href="{ZL:GetNodeLinkUrl(4)/}" target="_blank">关于公司</a></li>
+</ul>
+</div>
+</div>
+</main>
+
+{ZL.Label id="全站底部"/}
+
+<nav class="fixed-bottom mfoot">
+<div class="row">
+<div class="col"><a href="/"><i class="zi zi_home" zico="家"></i>首页</a></div>
+<div class="col"><a href="{ZL:GetNodeLinkUrl(2)/}"><i class="zi zi_gem"></i>商品</a></div>
+<div class="col"><a href="{ZL:GetNodeListUrl(2)/}"><i class="zi zi_shieldalt"></i>1元购</a></div>
+<div class="col"><a href="{ZL:GetNodeLinkUrl(1)/}" class="active"><i class="zi zi_paperplane"></i>资讯</a></div>
+<div class="col"><a href="/user/"><i class="zi zi_user"></i>我</a></div>
+</div>
+</nav>
+
+<script>
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$("#home_nav").css("position","fixed").addClass("active")
+	}
+	else{
+		$("#home_nav").css("position","relative").removeClass("active");
+	}
+});
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","20%").css("top","0.5rem");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+$(".shop_top .navbar-nav>li.dropdown").mouseover(function(){
+	$(this).addClass("open");
+}).mouseout(function(){
+	$(this).removeClass("open");
+});
+
+
+//智能背景画布
+var pattern = Trianglify({
+	width: window.innerWidth,
+	height:380,
+	x_colors: "GnBu"
+});
+var canvas = pattern.svg();
+canvas.style.position = "relative";
+canvas.style.top = 0;
+canvas.style.left = 0;
+//canvas.style.height = 760;
+document.getElementById("svgbg").appendChild(canvas);
+
+</script>
+</body>
+</html>

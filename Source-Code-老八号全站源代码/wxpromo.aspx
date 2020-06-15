@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="wxpromo.aspx.cs" Inherits="wxpromo" %>

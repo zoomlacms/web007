@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>333</LabelID>
+    <LabelName>内容页相关商品</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>八号商城</LabelCate>
+    <LabelDesc />
+    <LabelParam>ProIDS,,1,组合|order,asc$desc,3,Order顺序|ShowNum,10,1,调用信息数</LabelParam>
+    <LabelTable>ZL_Commodities</LabelTable>
+    <LabelField>Proname,Thumbnails,ID</LabelField>
+    <LabelWhere>Sales=1 and id in (@ProIDS)</LabelWhere>
+    <LabelOrder>addtime @order</LabelOrder>
+    <LabelContent>&lt;span&gt;规格选择：&lt;/span&gt;
+{Repeate}&lt;li id="guige{Field="ID"/}"&gt;&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}#shopCon"&gt;&lt;img src="{ZL:GetPicUrl({Field="Thumbnails"/})/}" alt="{Field="Proname"/}"  onerror="this.onerror=null;this.src='/UploadFiles/nopic.svg'" /&gt;{Field="Proname"/}&lt;/a&gt;&lt;/li&gt;{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>不等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot>{ZL.Label id="内容页相关商品_组合抽取" /}</Valueroot>
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Commodities","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

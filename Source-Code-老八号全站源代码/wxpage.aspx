@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="wxpage.aspx.cs" Inherits="test_GetWiKiToken" Debug="true" %>
